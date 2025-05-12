@@ -1,0 +1,28 @@
+{
+    "results": [
+        {
+            "table_number": "2.1.1",
+            "table_title": "Summary of Serious Adverse Events by Treatment Group",
+            "summary": [
+                "There were 12 total serious adverse events reported.",
+                "33.3% of Placebo participants experienced seizure.",
+                "0% of Placebo participants experienced nausea.",
+                "66.7% of Placebo participants experienced headache.",
+                "33.3% of Compound X participants experienced seizure.",
+                "22.2% of Compound X participants experienced nausea.",
+                "44.4% of Compound X participants experienced headache."
+            ]
+        },
+        {
+            "table_number": "2.1.2",
+            "table_title": "Adverse Events Leading to Death",
+            "summary": [
+                "There were 2 total serious adverse events reported.",
+                "0% of Placebo participants experienced cardiac arrest.",
+                "0% of Placebo participants experienced stroke.",
+                "50.0% of Compound X participants experienced cardiac arrest.",
+                "50.0% of Compound X participants experienced stroke."
+            ]
+        }
+    ]
+}

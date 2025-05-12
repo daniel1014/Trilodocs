@@ -1,0 +1,17 @@
+# FastAPI & async server
+fastapi
+uvicorn[standard]
+aiofiles
+python-multipart
+
+# Document parsing
+unstructured[docx]         # Includes docx support via python-docx
+python-docx
+
+# LLM integration
+langchain
+langchain-google-genai     # Langchain Gemini model access
+pydantic                   # For FastAPI models and JSON validation
+
+# Utilities
+python-dotenv              # Load .env file with Gemini key
