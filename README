@@ -21,12 +21,7 @@ Before running this project, you need to have the following installed on your sy
 
 Follow these steps to set up and install the project dependencies:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <repository_url>
-    cd TriloDocs # Navigate to the root project directory
-    ```
-    *(Replace `<repository_url>` with the actual URL of your repository)*
+1.  **Unzip the file:**
 
 2.  **Use the Makefile for setup:**
     From the root directory of the project, run the following command to set up both the backend and frontend:
