@@ -17,11 +17,13 @@ help:
 	@echo "  run-backend      : Run the backend FastAPI server."
 	@echo "  setup-frontend   : Navigate to frontend, install dependencies with --legacy-peer-deps."
 	@echo "  run-frontend     : Run the frontend Next.js development server."
+	@echo "  build-frontend   : Build the frontend Next.js project for production."
 	@echo "  setup-all        : Run both backend and frontend setup."
 	@echo "  run-all          : Run both backend and frontend servers concurrently (requires splitting terminal)."
 	@echo "  clean-backend    : Remove backend virtual environment."
 	@echo "  clean-frontend   : Remove frontend node_modules."
-	@echo "  clean-all        : Clean both backend and frontend."
+	@echo "  clean-next       : Remove the frontend Next.js build directory."
+	@echo "  clean-all        : Clean both backend and frontend build artifacts."
 
 # --- Backend Targets ---
 
@@ -55,6 +57,12 @@ run-frontend:
 	@echo "Running frontend server..."
 	@cd $(FRONTEND_DIR) && npm run dev
 
+.PHONY: build-frontend
+build-frontend:
+	@echo "Building frontend Next.js project..."
+	@cd $(FRONTEND_DIR) && npm run build
+	@echo "Frontend build complete."
+
 # --- Combined Targets ---
 
 .PHONY: setup-all
@@ -83,6 +91,11 @@ clean-frontend:
 	@echo "Cleaning frontend node_modules..."
 	@rm -rf $(FRONTEND_DIR)/node_modules
 
+.PHONY: clean-next
+clean-next:
+	@echo "Cleaning frontend Next.js build directory (.next)..."
+	@rm -rf $(FRONTEND_DIR)/.next
+
 .PHONY: clean-all
-clean-all: clean-backend clean-frontend
-	@echo "Cleaned backend virtual environment and frontend node_modules."
+clean-all: clean-backend clean-frontend clean-next
+	@echo "Cleaned backend virtual environment and frontend build artifacts."

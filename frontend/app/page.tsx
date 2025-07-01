@@ -251,20 +251,20 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={triggerFileInput}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white border-0 text-lg px-8 py-6 shadow-lg shadow-purple-500/20 group relative overflow-hidden"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white border-0 text-lg px-8 py-6 shadow-lg shadow-purple-500/20 group relative overflow-hidden transition-colors duration-500"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <FileUp className="h-5 w-5" />
                   Upload Document
                 </span>
-                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-                <span className="absolute -inset-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-700"></span>
+                <span className="absolute -inset-1 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                   <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 animate-pulse-slow rounded-md filter blur-md"></span>
                 </span>
               </Button>
               <Button
                 variant="outline"
-                className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border-purple-500/50 text-white hover:bg-purple-500/20 text-lg px-8 py-6 group"
+                className="bg-purple-500/70 border-purple-500/50 text-white hover:bg-gradient-to-r hover:from-purple-500/50 hover:to-cyan-500/50 text-lg px-8 py-6 group"
               >
                 <span className="flex items-center gap-2">
                   Learn More
@@ -277,7 +277,7 @@ export default function HomePage() {
       </section>
 
       {/* Upload Section with VFX */}
-      <section className="relative z-10 py-16">
+      <section className="relative z-10 py-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div
@@ -404,22 +404,18 @@ export default function HomePage() {
 
       {/* View History Button */}
       {textOutput && (
-        <section className="relative z-10 py-4">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Button
-                asChild
-                variant="outline"
-                className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border-purple-500/50 text-white hover:bg-purple-500/20"
-              >
-                <Link href="/history">
-                  <FileText className="mr-2 h-4 w-4" />
-                  View Document History
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        <div className="relative z-10 flex justify-center mb-8">
+          <Button
+            asChild
+            variant="outline"
+            className="bg-purple-500/70 border-purple-500/50 text-white hover:bg-gradient-to-r hover:from-purple-500/50 hover:to-cyan-500/50 px-6 py-3"
+          >
+            <Link href="/history">
+              <FileText className="mr-2 h-4 w-4" />
+              View Document History
+            </Link>
+          </Button>
+        </div>
       )}
 
       {/* Features Section */}
@@ -516,7 +512,8 @@ export default function HomePage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border-purple-500/50 text-white hover:bg-purple-500/20 text-lg px-8 py-6"
+                  // className="bg-gradient-to-r from-purple-500/50 to-cyan-500/50 border-purple-500/50 text-white hover:bg-purple-500/20 text-lg px-8 py-6"
+                  className="bg-purple-500/70 border-purple-500/50 text-white hover:bg-gradient-to-r hover:from-purple-500/50 hover:to-cyan-500/50 text-lg px-8 py-6"
                 >
                   Schedule a Demo
                 </Button>
