@@ -32,6 +32,7 @@ export interface HistoryItem {
  * @returns The processed data from the backend
  */
 export async function uploadDocument(file: File, onProgress?: (progress: number) => void): Promise<UploadResponse> {
+  console.log("Uploading document to:", API_BASE_URL)
   // Create a FormData object to send the file
   const formData = new FormData()
   formData.append("file", file)
