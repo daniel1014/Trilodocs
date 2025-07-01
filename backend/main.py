@@ -10,8 +10,9 @@ app = FastAPI()
 
 # Configure CORS
 origins = [
-    "http://localhost:3000",  # Allow requests from Next.js frontend development server
-    "http://127.0.0.1:3000",
+    "http://localhost:3000",           # for local dev
+    "http://127.0.0.1:3000",           # for local dev
+    "https://trilodocs-frontend.onrender.com",   # for production
 ]
 
 app.add_middleware(
