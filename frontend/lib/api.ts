@@ -2,8 +2,8 @@
  * API client for interacting with the backend services
  */
 
-// Base API URL - in a real app, this would come from environment variables
-const API_BASE_URL = "http://127.0.0.1:8000"
+// Base API URL - uses environment variables for different environments
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
 
 // Type for the response from the /upload endpoint and document details
 export interface UploadResponse {

@@ -16,7 +16,8 @@ help:
 	@echo "  setup-backend    : Set up backend virtual environment and install dependencies."
 	@echo "  run-backend      : Run the backend FastAPI server."
 	@echo "  setup-frontend   : Navigate to frontend, install dependencies with --legacy-peer-deps."
-	@echo "  run-frontend     : Run the frontend Next.js development server."
+	@echo "  run-frontend     : Run the frontend Next.js development server (local backend)."
+	@echo "  run-frontend-prod: Run the frontend Next.js development server (production backend)."
 	@echo "  build-frontend   : Build the frontend Next.js project for production."
 	@echo "  setup-all        : Run both backend and frontend setup."
 	@echo "  run-all          : Run both backend and frontend servers concurrently (requires splitting terminal)."
@@ -54,8 +55,13 @@ setup-frontend:
 
 .PHONY: run-frontend
 run-frontend:
-	@echo "Running frontend server..."
+	@echo "Running frontend server with local backend..."
 	@cd $(FRONTEND_DIR) && npm run dev
+
+.PHONY: run-frontend-prod
+run-frontend-prod:
+	@echo "Running frontend server with production backend..."
+	@cd $(FRONTEND_DIR) && npm run dev:prod
 
 .PHONY: build-frontend
 build-frontend:
