@@ -12,7 +12,8 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",           # for local dev
     "http://127.0.0.1:3000",           # for local dev
-    "https://trilodocs-frontend.onrender.com",   # for production
+    "https://trilodocs-frontend.onrender.com",   # for production on render
+    "https://trilodocs.vercel.app"  # for production on vercel
 ]
 
 app.add_middleware(
