@@ -208,8 +208,13 @@ export default function HomePage() {
             <Link href="#" className="text-gray-300 hover:text-white transition-colors">
               Documentation
             </Link>
-            <Link href="/history" className="text-gray-300 hover:text-white transition-colors">
-              History
+            <Link 
+              href="/history" 
+              className="text-gray-300 hover:text-white transition-colors relative group"
+            >
+              <span className="relative z-10">History</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </nav>
 
@@ -264,7 +269,7 @@ export default function HomePage() {
               </Button>
               <Button
                 variant="outline"
-                className="bg-purple-500/70 border-purple-500/50 text-white hover:bg-gradient-to-r hover:from-purple-500/50 hover:to-cyan-500/50 text-lg px-8 py-6 group"
+                className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border-purple-500/50 text-white hover:bg-purple-500/20 text-lg px-8 py-6 group"
               >
                 <span className="flex items-center gap-2">
                   Learn More
@@ -408,7 +413,7 @@ export default function HomePage() {
           <Button
             asChild
             variant="outline"
-            className="bg-purple-500/70 border-purple-500/50 text-white hover:bg-gradient-to-r hover:from-purple-500/50 hover:to-cyan-500/50 px-6 py-3"
+            className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border-purple-500/50 text-white hover:bg-purple-500/20 px-6 py-3"
           >
             <Link href="/history">
               <FileText className="mr-2 h-4 w-4" />
@@ -512,8 +517,7 @@ export default function HomePage() {
                 </Button>
                 <Button
                   variant="outline"
-                  // className="bg-gradient-to-r from-purple-500/50 to-cyan-500/50 border-purple-500/50 text-white hover:bg-purple-500/20 text-lg px-8 py-6"
-                  className="bg-purple-500/70 border-purple-500/50 text-white hover:bg-gradient-to-r hover:from-purple-500/50 hover:to-cyan-500/50 text-lg px-8 py-6"
+                  className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border-purple-500/50 text-white hover:from-purple-500/50 hover:to-cyan-500/50 text-lg px-8 py-6"
                 >
                   Schedule a Demo
                 </Button>
